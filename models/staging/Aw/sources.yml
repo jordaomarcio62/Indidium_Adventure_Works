@@ -6,13 +6,204 @@ sources:
     tables:
       - name: salesorderdetail
         columns:
-          - name: salesordderdetailid
+          - name: salesorderdetailid
+            tests:
+              - not_null    
+          - name: salesorderid
+            tests:
+              - not_null  
+          - name: productid
+            tests:
+              - not_null  
+
+      - name: Product
+        columns:
+          - name: productid
             tests:
               - unique
               - not_null
-      - name: salesorderheader
+          - name: name 
+          - name: productnumber
+          - name: makeflag
+          - name: finishedgoodsflag 
+          - name: color 
+          - name: safetystocklevel 
+          - name: reorderpoint 
+          - name: standardcost 
+          - name: listprice
+          - name: size 
+          - name: sizeunitmeasurecode 
+          - name: weightunitmeasurecode
+          - name: weight 
+          - name: daystomanufacture
+          - name: productline 
+          - name: class 
+          - name: style 
+          - name: productsubcategoryid
+          - name: productmodelid 
+          - name: sellstartdate
+          - name: sellenddate
+          - name: discontinueddate 
+          - name: rowguid
+          - name: modifieddate                       
+
+      - name: Customer
         columns:
-          - name: salesordderdetailid
+          - name: customerid
             tests:
               - unique
-              - not_null              
+              - not_null
+          - name: storeid
+          - name: territoryid
+          - name: rowguid 
+          - name: modifieddate  
+
+      - name: Person
+        columns:
+          - name: businessentityid
+            tests:
+              - unique
+              - not_null
+          - name: persontype 
+          - name: namestyle 
+          - name: title
+          - name: firstname 
+          - name: middlename 
+          - name: lastname 
+          - name: suffix 
+          - name: emailpromotion 
+          - name: additionalcontactinfo 
+          - name: demographics 
+          - name: rowguid 
+          - name: modifieddate 
+
+
+      - name: Salesorderheadersalesreason
+        columns:
+          - name: salesorderid
+            tests:
+              - not_null
+          - name: salesreasonid
+            tests:
+              - not_null           
+          - name: modifieddate               
+
+
+      - name: Salesreason
+        columns:
+          - name: salesreasonid
+            tests:
+              - unique
+              - not_null
+          - name: name 
+          - name: reasontype  
+          - name: modifieddate
+
+
+      - name:  Salesperson
+        columns:
+          - name: businessentityid
+            tests:
+              - unique
+              - not_null
+          - name: territoryid 
+          - name: salesquota
+          - name: bonus 
+          - name: commissionpct 
+          - name: salesytd 
+          - name: saleslastyear
+          - name: rowguid 
+          - name: modifieddate 
+
+
+      - name:  Employee
+        columns:
+          - name: businessentityid
+            tests:
+              - unique
+              - not_null
+          - name: nationalidnumber 
+          - name: loginid 
+          - name: jobtitle 
+          - name: birthdate
+          - name: maritalstatus 
+          - name: gender 
+          - name: hiredate 
+          - name: salariedflag 
+          - name: vacationhours
+          - name: sickleavehours 
+          - name: currentflag 
+          - name: rowguid 
+          - name: modifieddate 
+          - name: organizationnode 
+
+      - name:  Stateprovince
+        columns:
+          - name: stateprovinceid
+            tests:
+              - unique
+              - not_null
+          - name: stateprovincecode
+          - name: countryregioncode 
+          - name: isonlystateprovinceflag 
+          - name: name 
+          - name: territoryid
+          - name: rowguid 
+          - name: modifieddate 
+
+
+      - name:  countryregion
+        columns:
+          - name: countryregioncode
+            tests:
+              - unique
+              - not_null
+          - name: name          
+          - name: modifieddate  
+
+      - name:  Address
+        columns:
+          - name: addressid
+            tests:
+              - unique
+              - not_null
+          - name: addressline1
+          - name: addressline2
+          - name: city 
+          - name: stateprovinceid 
+          - name: postalcode
+          - name: spatiallocation 
+          - name: rowguid
+          - name: modifieddate 
+         
+      - name:  salesorderheader
+        columns:
+          - name: salesorderid 
+            tests:
+              - unique
+              - not_null
+          - name: salespersonid
+          - name: territoryid
+          - name: billtoaddressid 
+          - name: shiptoaddressid 
+          - name: shipmethodid 
+          - name: creditcardid 
+          - name: currencyrateid 
+          - name: customerid 
+          - name: revisionnumber 
+          - name: orderdate 
+          - name: duedate 
+          - name: shipdate 
+          - name: status 
+          - name: onlineorderflag 
+          - name: purchaseordernumber 
+          - name: accountnumber
+          - name: creditcardapprovalcode
+          - name: subtotal 
+          - name: taxamt
+          - name: freight 
+          - name: totaldue 
+          - name: comment
+          - name: rowguid 
+          - name: modifieddate 
+        
