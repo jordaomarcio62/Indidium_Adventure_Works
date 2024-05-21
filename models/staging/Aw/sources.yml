@@ -55,6 +55,8 @@ sources:
               - not_null
           - name: storeid
           - name: territoryid
+            tests:
+              - not_null          
           - name: rowguid 
           - name: modifieddate  
 
@@ -184,12 +186,22 @@ sources:
               - not_null
           - name: salespersonid
           - name: territoryid
+            tests:
+              - not_null             
           - name: billtoaddressid 
+            tests:
+              - not_null             
           - name: shiptoaddressid 
-          - name: shipmethodid 
+            tests:
+              - not_null             
+          - name: shipmethodid
+            tests:
+              - not_null              
           - name: creditcardid 
           - name: currencyrateid 
           - name: customerid 
+            tests:
+              - not_null             
           - name: revisionnumber 
           - name: orderdate 
           - name: duedate 
