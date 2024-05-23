@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: dim_endereco
+    description: >
+      Tabela dimensão dos Vendedores Adventure World.
+    columns:
+      - name: pk_endereco
+        description: Chave primária da dimensão de endereço.
+        tests:
+          - unique
+          - not_null

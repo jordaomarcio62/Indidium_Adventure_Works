@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: dim_motivo_vendas
+    description: >
+      Tabela dimensão dos Vendedores Adventure World.
+    columns:
+      - name: fk_pedido
+        description: Chave estrangeira de pedidos.
+      - name: fk_motivo_venda
+        description: Chave estrangeira de motivo de vendas.        
