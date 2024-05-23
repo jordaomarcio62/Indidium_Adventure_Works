@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: dim_clientes
+    description: >
+      Tabela dimensão dos Vendedores Adventure World.
+    columns:
+      - name: pk_cliente
+        description: Chave primária da dimensão de clientes.
+        tests:
+          - unique
+          - not_null
