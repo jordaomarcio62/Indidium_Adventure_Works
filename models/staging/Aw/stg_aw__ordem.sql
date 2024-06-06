@@ -2,7 +2,7 @@ with
     fonte_ordem as (
         select
             cast(salesorderid  as  int) as  pk_pedido
-            ,cast(salespersonid as  int) as  fk_pessao
+            ,cast(salespersonid as  int) as  fk_pessoa
             ,cast(territoryid as  int) as  fk_territorio
             ,cast(billtoaddressid  as  int) as  fk_endereco_da_conta
             ,cast(shiptoaddressid  as  int) as  fk_endereco_de_envio
@@ -11,9 +11,9 @@ with
             ,cast(currencyrateid  as  int) as  fk_cambio
             ,cast(customerid  as  int) as  fk_cliente
             ,cast(revisionnumber  as  int) as  numero_revisao
-            ,cast(orderdate  as  varchar) as  data_pedido
-            ,cast(duedate  as  varchar) as  data_vencimento
-            ,cast(shipdate  as  varchar) as  data_envio
+            ,cast(orderdate  as  date) as  data_pedido
+            ,cast(duedate  as  date) as  data_vencimento
+            ,cast(shipdate  as  date) as  data_envio
             ,cast(status  as  int) as  status
             ,cast(onlineorderflag  as  boolean) as  flag_pedido
             ,cast(purchaseordernumber  as  varchar) as  numero_compra_pedido

@@ -218,4 +218,18 @@ sources:
           - name: comment
           - name: rowguid 
           - name: modifieddate 
+
+
+      - name: creditcard
+        columns:
+          - name: creditcardid
+            tests:
+              - unique
+              - not_null
+          - name: cardtype
+          - name: cardnumber
+          - name: expmonth
+          - name: expyear 
+          - name: modifieddate
+      
         
