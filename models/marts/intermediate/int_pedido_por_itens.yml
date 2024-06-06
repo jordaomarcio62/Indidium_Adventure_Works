@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: int_pedido_por_itens
+    description: >
+      Tabela dimensão dos Vendedores Adventure World.
+    columns:
+      - name: sk_vendas
+        description: Chave primária da dimensão de Vendedores.
+        tests:
+          - unique
+          - not_null

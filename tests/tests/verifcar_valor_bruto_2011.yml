@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: fct_pedidos
+    tests:
+      - name: verificar_valor_bruto_2011
+
+

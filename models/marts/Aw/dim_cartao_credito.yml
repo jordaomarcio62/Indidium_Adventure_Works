@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: dim_cartao_credito
+    description: >
+      Tabela dimensão dos Vendedores Adventure World.
+    columns:
+      - name: pk_cartao_credito
+        description: Chave primária da dimensão de clientes.
+        tests:
+          - unique
+          - not_null
